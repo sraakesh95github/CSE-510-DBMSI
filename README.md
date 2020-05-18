@@ -4,7 +4,8 @@
 1 Goal
 The version of the MiniBase I have distributed to you implements various modules of a relational database management
 system. Our goal this semester is to use these modules of MiniBase as building blocks for implementing a Bigtable-like
-DBMS.
+DBMS.<br>
+<br>
 2 Project Description
 The following is a list of tasks that you need to perform for this final phase of the project:
 • Implement a command-line program getCounts. Given the commandline invocation
@@ -25,6 +26,7 @@ table there may be maps stored according to different storage types.
 ∗ maps are column label sorted (in increasing order)
 – Type 4:
 ∗ one btree to index column label and row label (combined key) and
+
 1∗ maps are sorted on combined key (in increasing order)
 – Type 5:
 ∗ one btree to index row label and value (combined key) and
@@ -57,6 +59,7 @@ the program will access the database and printout the matching maps in the reque
 Each filter canbe
 – “*”: meaning unspecified (need to be returned),
 – a single value, or
+
 2– a range specified by two column seperated values in square brackets (e.g. “[56, 78]”)
 Minibase will use at most NUMBUF buffer pages to run the query (see the Class BufMgr).
 At the end of the query, the program should also output the number of disk pages that were read and written
@@ -88,6 +91,7 @@ int n_pages)
 Here RowOrder is similar to TupleOrder of minibase.
 Like its Minibase counterpart, Sort needs to support a getNext() method that returns maps of the resulting
 rows in the specified order.
+
 3• Implement a command-line program rowsort. Given the command line invocation
 rowsort INBTNAME OUTBTNAME ROWORDER COLUMNNAME NUMBUF
 the program will sort the big table. Minibase will use at most NUMBUF buffer pages to run the query (see the Class
