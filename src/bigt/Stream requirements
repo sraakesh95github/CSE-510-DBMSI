@@ -1,0 +1,5 @@
+Create a method to access the heapfile to create a Scan in the Streams.java
+Mapping Maps to Tuples is required for the scan
+Removed the static from converttoFixed() in Map.java
+
+

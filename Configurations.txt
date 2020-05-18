@@ -1,0 +1,5 @@
+batchinsert Testfiles\test_data_1a.csv 1 bigtable1 50 
+query bigtable1 1 1 Missouri Jaguar '*' 50
+scan bigtable1 50
+rowsort bigtable1 bigtable_out Missouri 50
+mapinsert Arizona Monkey 12365 23212 1 bitable2
